@@ -53,30 +53,35 @@
         <div class="mb-4 ">
             @foreach ($posts as $post)
             
-                <div class="w-full p-4 mb-4 bg-white border-l-4 border-purple-400 rounded-lg ">
+                <div class="w-full p-4 mb-4 bg-white border-l-4 border-purple-400 shadow">
                     <div class="grid grid-cols-6 gap-4 ">
                         <div class="w-20 col-span-1 col-start-1 mr-3 rounded-full icon">
                             <img src="{{ asset('images/' . $post->image_path) }}" class="rounded-md md:w-28 md:max-h-20"/>
                         </div>
                         <div class="col-start-2 col-end-4">
-                            <span class="card-notify-year "> {{ $post->category }}</span>
                             <div class="mt-0 text-lg"> <a href="/startup/{{ $post->slug }}">{{$post->title}} </a></div>
                             <div class="text-sm text-gray-400">{{$post->description}}</div>
-                            <div class="flex flex-row mt-2">
-                                <span>1</span>
-                                <span>1</span>
-                            </div>
+                            {{-- <div class="flex flex-row ">
+                                <span class="relative inline-block py-1 text-xs font-semibold text-red-500 bg-red-200 rounded-md ">{{ $post->category }}</span>
+                            </div> --}}
                         </div>
-                        <div class="w-20 col-span-1 col-end-7 rounded-full icon">
-                            <img src="{{ asset('images/' . $post->image_path) }}" class="rounded-md md:w-28 md:max-h-20"/>
+                        <div class="flex flex-col content-center w-16 col-span-1 col-end-7 mx-auto border">
+                            
+                            <button class="flex items-center py-3 mx-auto">
+                                <svg class="w-8 h-10 " xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 18 18"><path d="M9 6l-4 4h8z"/></svg>
+                            </button>                
+                            <span class="flex items-center mx-auto -mt-7">1</span>                           
                         </div>
+                           
+                            
+                       
                     </div>
                     <div class="flex flex-row ml-16">
                         @if (isset(Auth::user()->id) && Auth::user()->id ==
                         $post->user_id)
                             <span class="float-right">
                                 <a href="/startup/{{ $post->slug }}/edit"
-                                    class="pb-1 ml-8 italic text-gray-700 border-b-2 hover:text-gray-900"
+                                    class="pb-1 mt-4 text-indigo-500 ml-14 "
                                     >Edit
                                 
                                 </a>

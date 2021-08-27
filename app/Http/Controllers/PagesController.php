@@ -7,8 +7,10 @@ use App\Models\Post;
 
 class PagesController extends Controller
 {
-    public function index ()
+    public function index (Post $post)
     {
-        return view('index');
+        $posts = Post::all();
+        return view('index', compact('posts'));
+        
     }
 }

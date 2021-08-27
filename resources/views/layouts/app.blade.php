@@ -26,7 +26,7 @@
                     </a>
                 </div>
                 <ul class="flex items-center hidden space-x-8 lg:flex">
-            <!----    <li><a href="{{ route('startup.index') }}" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-indigo-400 ">Startup</a></li>  -------->
+          <li><a href="{{ route('startup.index') }}" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-indigo-400 ">Startup</a></li> 
                 <li><a href="/" aria-label="Our product" title="Our product" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-indigo-400 ">Features</a></li>
                 <li><a href="/" aria-label="About us" title="About us" class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-indigo-400 ">About us</a></li>
                 </ul>
