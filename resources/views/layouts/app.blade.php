@@ -40,7 +40,7 @@
                     @else
                         <span>{{ Auth::user()->name }}</span>
                         <a href="{{ route('startup.create') }}"><button class="px-4 py-2 border border-indigo-500">Post</button></a>
-                        <a href="{{ route('logout') }}"
+                        <a href="{{ url('/logout') }}"
                            class="no-underline hover:underline"
                            onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
